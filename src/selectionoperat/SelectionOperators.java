@@ -3,19 +3,19 @@ package selectionoperat;
 public class SelectionOperators {
 
     public static void main(String[] args) {
-        SelectOperatorstask1();
-        SelectOperatorstask2();
-        SelectOperatorstask3();
-        SelectOperatorstask4();
-        SelectOperatorstask5();
-        SelectOperatorstask6();
-        SelectOperatorstask7();
-        SelectOperatorstask8();
-        SelectOperatorstask9();
+        selectOperatorstask1();
+        selectOperatorstask2();
+        selectOperatorstask3();
+        selectOperatorstask4();
+        selectOperatorstask5();
+        selectOperatorstask6();
+        selectOperatorstask7();
+        selectOperatorstask8();
+        selectOperatorstask9();
     }
 
     //Даны три целых числа. Возвести в квадрат отрицательные числа и прибавить 100 к  положительным, число 0 не изменять.
-    private static void SelectOperatorstask1() {
+    private static void selectOperatorstask1() {
         double a = 13;
         double b = -8;
         double c = 0;
@@ -38,7 +38,7 @@ public class SelectionOperators {
     }
 
     //Из трех данных чисел выбрать наименьшее и наибольшее.
-    private static void SelectOperatorstask2() {
+    private static void selectOperatorstask2() {
         int a = 1;
         int b = 2;
         int c = -4;
@@ -59,7 +59,7 @@ public class SelectionOperators {
     }
 
     //Даны три числа. Найти сумму наибольших чисел.
-    private static void SelectOperatorstask3() {
+    private static void selectOperatorstask3() {
         int a = 11;
         int b = -7;
         int c = -4;
@@ -74,7 +74,7 @@ public class SelectionOperators {
 
     //Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной сумму этих значений, 
     //а если равны, то присвоить переменным нулевые значения.
-    private static void SelectOperatorstask4() {
+    private static void selectOperatorstask4() {
         int a = 12;
         int b = 8;
         if (a != b) {
@@ -90,7 +90,7 @@ public class SelectionOperators {
 
     //На числовой оси расположены три точки: A, B, C. Определить, какая из двух последних точек (B или C) расположена ближе к A, 
     //и вывести эту точку и ее расстояние от точки A.
-    private static void SelectOperatorstask5() {
+    private static void selectOperatorstask5() {
         int a = 12;
         int b = -8;
         int c = 5;
@@ -103,10 +103,10 @@ public class SelectionOperators {
 
     //Дан номер некоторого года (положительное целое число). Вывести соответствующий ему номер столетия, учитывая, 
     //что, к примеру, началом 20 столетия был 1901 год.
-    private static void SelectOperatorstask6() {
+    private static void selectOperatorstask6() {
         int year = 1801;
         int century;
-        if ((year > 0) && (year % 1 == 0)) {
+        if (year > 0) {
             if (year % 100 == 0) {
                 century = (year / 100);
             } else {
@@ -117,7 +117,7 @@ public class SelectionOperators {
     }
 
     //Дан номер месяца (1 — январь, 2 — февраль, ...). Вывести название соответствующего времени года ("зима", "весна" и т.д.).
-    private static void SelectOperatorstask7() {
+    private static void selectOperatorstask7() {
         int monthNum = 12;
         if ((monthNum > 0) && (monthNum < 13)) {
             if (monthNum == 12 || monthNum == 2 || monthNum == 1) {
@@ -136,7 +136,7 @@ public class SelectionOperators {
 
     //Арифметические действия над числами пронумерованы следующим образом: 1 — сложение,
     //2— вычитание, 3 — умножение, 4 — деление. Дан номер действия и два числа A и B (В не равно нулю). Выполнить над числами указанное действие и вывести результат.
-    private static void SelectOperatorstask8() {
+    private static void selectOperatorstask8() {
         double a = 200;
         double b = 10;
         int arithmeticOperation = 4;
@@ -153,11 +153,10 @@ public class SelectionOperators {
             case 4:
                 if (b > 0) {
                     System.out.println("Результат деления: " + (a / b));
-                    break;
                 } else {
                     System.out.println("Не дели на ноль балбес");
-                    break;
                 }
+                break;
             default:
                 System.out.println("Номер арифметической операции не соответсвует заданным");
         }
@@ -166,7 +165,7 @@ public class SelectionOperators {
     //Локатор ориентирован на одну из сторон света ("С" — север, "З" — запад, "Ю" — юг, "В" — восток) и может принимать три цифровые команды:
     //1 — поворот налево, –1 — поворот направо, 2 — поворот на 180 градусов. Дан символ C — исходная ориентация локатора и числа N1 и N2 — две посланные ему команды. 
     //Вывести ориентацию локатора после выполнения данных команд.
-    private static void SelectOperatorstask9() {
+    private static void selectOperatorstask9() {
         int n1 = -1;
         int n2 = 2;
         char azimut = 'С';
