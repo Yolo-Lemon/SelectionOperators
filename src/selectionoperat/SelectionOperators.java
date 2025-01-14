@@ -292,6 +292,6 @@ public class SelectionOperators {
                     break;
             }
         }
-        System.out.println(azimut);
+        System.out.println("Компас показывает: " + azimut);
     }
 }
