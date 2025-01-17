@@ -300,19 +300,21 @@ public class SelectionOperators {
         double angle2 = Math.toRadians(0);
         double x = 0;
         double y = 1;
-        compas(x, y, angle1, angle2);
-
+        double x1 = rotateX(x, y, angle1);
+        double y1 = rotateY(x, y, angle1);
+        x1 = rotateX(x1, y1, angle2);
+        y1 = rotateY(x1, y1, angle2);
+        System.out.println(Math.round(x1) + " " + Math.round(y1));
     }
 
-    public static void compas(double x, double y, double angle1, double angle2) {
-        double x1;
-        double y1;
-        double x2;
-        double y2;
-        x1 = x * Math.cos(angle1) - y * Math.sin(angle1);
-        y1 = x * Math.sin(angle1) + y * Math.cos(angle1);
-        x2 = Math.round(x1) * Math.cos(angle1) - Math.round(y1) * Math.sin(angle1);
-        y2 = Math.round(x1) * Math.sin(angle1) + Math.round(y1) * Math.cos(angle1);
-        System.out.println("Первый поворт: " + Math.round(x1) + " " + Math.round(y1) + " И второй поврот: " + Math.round(x2) + " " + Math.round(y2));
+    public static double rotateX(double x, double y, double angle1) {
+        double x1 = x * Math.cos(angle1) - y * Math.sin(angle1);
+        return (x1);
     }
+
+    public static double rotateY(double x, double y, double angle1) {
+        double y1 = x * Math.sin(angle1) + y * Math.cos(angle1);
+        return (y1);
+    }
+
 }
