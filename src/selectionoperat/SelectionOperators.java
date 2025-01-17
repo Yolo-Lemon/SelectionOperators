@@ -12,6 +12,7 @@ public class SelectionOperators {
         selectOperatorstask7();
         selectOperatorstask8();
         selectOperatorstask9();
+        selectOperatorstask10();
     }
 
     //Даны три целых числа. Возвести в квадрат отрицательные числа и прибавить 100 к  положительным, число 0 не изменять.
@@ -292,5 +293,26 @@ public class SelectionOperators {
             }
         }
         System.out.println("Компас показывает: " + azimut);
+    }
+
+    private static void selectOperatorstask10() {
+        double angle1 = Math.toRadians(90);
+        double angle2 = Math.toRadians(0);
+        double x = 0;
+        double y = 1;
+        compas(x, y, angle1, angle2);
+
+    }
+
+    public static void compas(double x, double y, double angle1, double angle2) {
+        double x1;
+        double y1;
+        double x2;
+        double y2;
+        x1 = x * Math.cos(angle1) - y * Math.sin(angle1);
+        y1 = x * Math.sin(angle1) + y * Math.cos(angle1);
+        x2 = Math.round(x1) * Math.cos(angle1) - Math.round(y1) * Math.sin(angle1);
+        y2 = Math.round(x1) * Math.sin(angle1) + Math.round(y1) * Math.cos(angle1);
+        System.out.println("Первый поворт: " + Math.round(x1) + " " + Math.round(y1) + " И второй поврот: " + Math.round(x2) + " " + Math.round(y2));
     }
 }
